@@ -1,0 +1,120 @@
+<section class="testimonials">
+        <div class="container">
+            <h2>Apa Kata Mereka?</h2>
+            <div class="testimonial-item">
+                <video controls>
+                    <source src="video/testimoni1.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video tag.
+                </video>
+                <p>"Website Bimbel sangat membantu anak saya dalam belajar! Metode pengajarannya sangat interaktif."</p>
+                <cite>- Ibu Siti, Orang Tua Siswa</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tambahkan di atas footer -->
+<section class="testimonials">
+    <div class="container">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testimonial-item">
+            <p>"Website Bimbel sangat membantu anak saya dalam belajar! Metode pengajarannya sangat interaktif."</p>
+            <cite>- Ibu Siti, Orang Tua Siswa</cite>
+        </div>
+        <div class="testimonial-item">
+            <p>"Kursus online yang fleksibel membuat saya bisa belajar kapan saja. Sangat direkomendasikan!"</p>
+            <cite>- Budi, Siswa</cite>
+        </div>
+    </div>
+</section>
+
+<!-- Formulir Pendaftaran -->
+<section class="registration-form">
+    <div class="container">
+        <h2>Daftar Sekarang!</h2>
+        <form action="register.php" method="POST">
+            <input type="text" name="name" placeholder="Nama Lengkap" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Kata Sandi" required>
+            <button type="submit" class="btn">Daftar</button>
+        </form>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+        <div class="faq-item">
+            <h3>Apa saja kursus yang ditawarkan?</h3>
+            <p>Kami menawarkan berbagai kursus dari tingkat dasar hingga lanjutan, termasuk matematika, bahasa, dan sains.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Bagaimana cara mendaftar?</h3>
+            <p>Anda bisa mendaftar melalui formulir pendaftaran di website kami atau menghubungi kami langsung.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Apakah ada biaya pendaftaran?</h3>
+            <p>Biaya pendaftaran tergantung pada kursus yang dipilih. Silakan cek halaman kursus untuk informasi lebih lanjut.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="testimonials">
+    <div class="container">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testimonial-item">
+            <video controls>
+                <source src="video/testimoni1.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video tag.
+            </video>
+            <p>"Website Bimbel sangat membantu anak saya dalam belajar! Metode pengajarannya sangat interaktif."</p>
+            <cite>- Ibu Siti, Orang Tua Siswa</cite>
+        </div>
+    </div>
+</section>
+
+<!-- Tambahkan di atas footer -->
+<section class="testimonials">
+<div class="container">
+    <h2>Apa Kata Mereka?</h2>
+    <div class="testimonial-item">
+        <p>"Website Bimbel sangat membantu anak saya dalam belajar! Metode pengajarannya sangat interaktif."</p>
+        <cite>- Ibu Siti, Orang Tua Siswa</cite>
+    </div>
+    <div class="testimonial-item">
+        <p>"Kursus online yang fleksibel membuat saya bisa belajar kapan saja. Sangat direkomendasikan!"</p>
+        <cite>- Budi, Siswa</cite>
+    </div>
+</div>
+</section>
+
+<!-- Formulir Pendaftaran -->
+<section class="registration-form">
+<div class="container">
+    <h2>Daftar Sekarang!</h2>
+    <form action="register.php" method="POST">
+        <input type="text" name="name" placeholder="Nama Lengkap" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Kata Sandi" required>
+        <button type="submit" class="btn">Daftar</button>
+    </form>
+</div>
+</section>
+
+<section class="faq">
+<div class="container">
+    <h2>Pertanyaan yang Sering Diajukan</h2>
+    <div class="faq-item">
+        <h3>Apa saja kursus yang ditawarkan?</h3>
+        <p>Kami menawarkan berbagai kursus dari tingkat dasar hingga lanjutan, termasuk matematika, bahasa, dan sains.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Bagaimana cara mendaftar?</h3>
+        <p>Anda bisa mendaftar melalui formulir pendaftaran di website kami atau menghubungi kami langsung.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Apakah ada biaya pendaftaran?</h3>
+        <p>Biaya pendaftaran tergantung pada kursus yang dipilih. Silakan cek halaman kursus untuk informasi lebih lanjut.</p>
+    </div>
+</div>
+</section>

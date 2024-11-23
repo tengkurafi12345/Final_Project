@@ -1,0 +1,104 @@
+  FITUR WEBSITE BIMBEL
+
+  1. Halaman Utama
+Deskripsi Singkat:
+Halaman ini adalah wajah utama website, bertujuan memberikan kesan pertama yang menarik dan menyampaikan informasi penting secara ringkas.
+
+Elemen Utama:
+
+Logo dan Nama Bimbel: Logo yang mencerminkan identitas lembaga.
+Tagline: Kalimat singkat yang menggambarkan nilai atau keunggulan bimbel.
+Visi dan Misi: Ringkasan visi dan misi bimbel, agar pengunjung memahami tujuan dan arah lembaga.
+Keunggulan: Menyoroti keunggulan utama seperti pengajar berkualitas, metode pembelajaran inovatif, dan program variatif.
+Call to Action (CTA): Tombol seperti "Daftar Sekarang," "Lihat Program," atau "Hubungi Kami."
+Gambar/Video Interaktif: Hero section dengan gambar kegiatan atau video singkat untuk menarik perhatian.
+Testimoni Singkat: Menampilkan kutipan testimoni dari siswa/orang tua sebagai bukti kredibilitas.
+
+
+2. Program Bimbingan
+Deskripsi Singkat:
+Menampilkan informasi mendalam tentang program yang ditawarkan, baik online maupun offline.
+
+Elemen Utama:
+
+Daftar Program: Subjek yang diajarkan (Matematika, Fisika, dll.), tingkat pendidikan (SD, SMP, SMA), dan format (online/offline).
+Deskripsi Program: Penjelasan tentang tujuan, durasi, metode pembelajaran, dan hasil yang diharapkan.
+Biaya: Informasi tentang biaya pendaftaran dan biaya per kelas atau paket.
+Pendaftaran Program: Tombol pendaftaran langsung untuk program tertentu.
+Filter Program: Pencarian program berdasarkan subjek, tingkat pendidikan, atau format.
+Rating dan Ulasan Program: Ulasan dari peserta sebelumnya untuk meningkatkan kepercayaan calon siswa.
+
+
+3. Jadwal Kelas
+Deskripsi Singkat:
+Memberikan informasi tentang jadwal kelas terkini dan mendatang.
+
+Elemen Utama:
+
+Kalender Kelas: Tampilan kalender dengan detail tanggal dan waktu kelas (online/offline).
+Daftar Kelas yang Tersedia: Subjek, pengajar, dan lokasi (untuk kelas offline).
+Pendaftaran Kelas: Tombol untuk mendaftar langsung ke kelas yang dipilih.
+Sinkronisasi Kalender: Fitur untuk menambahkan jadwal ke Google Calendar atau iCal.
+Pemberitahuan Kelas: Sistem pengingat melalui email atau notifikasi di website.
+Filter Jadwal: Pencarian jadwal berdasarkan tingkat pendidikan, subjek, atau pengajar.
+
+
+4. Materi Pembelajaran
+Deskripsi Singkat:
+Memberikan akses ke materi pembelajaran secara fleksibel dan interaktif.
+
+Elemen Utama:
+
+Katalog Materi: Daftar materi seperti modul, video pembelajaran, latihan soal, dll.
+Kategori Materi: Pengelompokan materi berdasarkan subjek atau tingkat pendidikan.
+Download dan Streaming: Siswa dapat mengunduh materi atau menonton video secara streaming.
+Progress Tracking: Fitur untuk melacak progres siswa dalam menyelesaikan materi.
+Quiz Interaktif: Ujian kecil atau latihan di akhir materi untuk mengukur pemahaman siswa.
+Forum Diskusi: Ruang untuk siswa berdiskusi tentang materi atau bertanya kepada pengajar.
+Akses Berdasarkan Level: Materi hanya bisa diakses oleh siswa yang terdaftar pada program tertentu.
+
+
+5. Testimoni
+Deskripsi Singkat:
+Halaman ini menampilkan ulasan dari siswa dan orang tua yang telah mengikuti program bimbel.
+
+Elemen Utama:
+
+Kutipan Testimoni: Tampilkan ulasan singkat yang menggambarkan pengalaman positif.
+Foto atau Video Siswa: Sertakan foto atau video testimoni siswa (dengan izin).
+Rating Sistem: Penilaian bintang atau skor untuk memberikan gambaran tentang kepuasan siswa.
+Rotasi Otomatis: Slider dinamis untuk menampilkan testimoni secara otomatis.
+Ajakan Testimoni: Opsi untuk pengguna memberikan testimoni langsung melalui formulir.
+
+
+6. Kontak
+Deskripsi Singkat:
+Memberikan cara bagi pengunjung untuk menghubungi bimbel secara langsung.
+
+Elemen Utama:
+
+Formulir Kontak: Formulir sederhana untuk mengirimkan pertanyaan atau permintaan informasi.
+Informasi Kontak: Alamat email, nomor telepon, alamat fisik, dan media sosial.
+Google Maps: Peta interaktif jika memiliki lokasi fisik.
+Jam Operasional: Informasi tentang waktu layanan.
+Chat Support: Fitur live chat melalui WhatsApp, Telegram, atau chatbot.
+
+
+7. Blog atau Berita (Opsional)
+Deskripsi Singkat:
+Halaman ini menyajikan artikel dan berita pendidikan untuk menambah nilai bagi pengunjung.
+
+Elemen Utama:
+
+Artikel: Konten edukatif, seperti tips belajar, motivasi, atau teknik menghadapi ujian.
+Berita: Informasi terkini tentang program baru, kegiatan, atau acara bimbel.
+Kategori Artikel: Kategorisasi artikel berdasarkan topik untuk navigasi yang lebih mudah.
+Komentar dan Share: Fitur untuk meningkatkan interaksi dan penyebaran artikel.
+Penjadwalan Artikel: Pembaruan rutin agar halaman terlihat aktif dan relevan.
+
+
+Peningkatan Umum untuk Semua Fitur:
+1.Desain Responsif: Pastikan semua halaman dapat diakses dengan nyaman di perangkat mobile dan desktop.
+2.Keamanan Data: Gunakan HTTPS untuk melindungi data pengguna. Validasi semua input untuk menghindari serangan SQL Injection atau XSS.
+3.Navigasi yang Mudah: Sediakan menu navigasi utama dengan dropdown untuk memudahkan akses ke setiap halaman.
+4.SEO-Friendly: Optimalkan elemen website untuk SEO agar lebih mudah ditemukan di mesin pencari.

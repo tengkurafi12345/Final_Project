@@ -1,0 +1,27 @@
+<!-- form_upload_link.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Link</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Link Pembelajaran</h1>
+        <form action="upload_link.php" method="POST">
+            <label for="title">Judul Link</label>
+            <input type="text" name="title" id="title" required><br>
+
+            <label for="link_url">URL Link</label>
+            <input type="url" name="link_url" id="link_url" required><br>
+
+            <label for="description">Deskripsi</label>
+            <textarea name="description" id="description" required></textarea><br>
+
+            <input type="submit" name="submit" value="Upload Link">
+        </form>
+    </div>
+</body>
+</html>

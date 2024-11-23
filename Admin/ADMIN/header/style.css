@@ -1,0 +1,38 @@
+/* Global style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    background-image: linear-gradient(to bottom left, rgb(110, 0, 138), #7c0000,);
+}
+/* container */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background-image: linear-gradient(to bottom right, rgb(255, 0, 191),  rgb(0, 4, 255));
+} 
+/* Header style */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #6a0dad; /* Ungu */
+    color: #fff;
+}
+
+/* Profile pop-up */
+.profile {
+    display: none; /* Awalnya disembunyikan */
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.icons:hover + .profile {
+    display: block; /* Tampilkan saat ikon user diklik */
+}

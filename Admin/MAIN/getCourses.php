@@ -1,0 +1,332 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Koneksi ke database
+$conn = new mysqli('localhost', 'root', '', 'zidnan');
+
+// Memeriksa koneksi
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Mengambil data kursus
+$sql = "SELECT * FROM courses";
+$result = $conn->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/getCourses.css">
+    <title>Program Bimbingan</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="user.php">Home</a>
+        <a href="course.php">Courses</a>
+        <a href="siswa.php">Siswa</a>
+        <a href="guru.php">Guru</a>
+        <a href="blog.php">Blog</a>
+        <a href="testimonial.php">Testimonial</a>
+        <a href="buku-media.php">Buku & Media</a>
+    </div>
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Courses</h1>
+        </header>
+
+    <div class="container">
+        <!-- Filter Program -->
+        <main>
+            <div class="filters">
+                <select class="filter-dropdown" id="subject-filter">
+                    <option value="">Pilih Subjek</option>
+                    <option value="matematika">Matematika</option>
+                    <option value="fisika">Fisika</option>
+                    <option value="bahasa">Bahasa Inggris</option>
+                    <option value="arab">Bahasa Arab</option>
+                    <option value="indonesia">Bahasa Indonesia</option>
+                    <option value="tafsir">Tafsir</option>
+                    <option value="alquran">Al-Qur'an & Tajwid</option>
+                    <option value="hadits">Hadits</option>
+                    <option value="siroh">Siroh Nabawiyah</option>
+                    <option value="ipa">Ilmu Pengetahuan Alam</option>
+                    <option value="ips">Ilmu Pengetahuan Sosial</option>
+                    <option value="kimia">Kimia</option>
+                    <option value="biologi">Biologi</option>
+                    <option value="it">IT</option>
+                    <option value="programer">Pemrograman</option>
+                </select>
+                <select class="filter-dropdown" id="level-filter">
+                    <option value="">Tingkat Pendidikan</option>
+                    <option value="sd">SD</option>
+                    <option value="smp">SMP</option>
+                    <option value="sma">SMA</option>
+                </select>
+            </div>
+        
+            <div class="courses-container">
+                <div class="course-card">
+                    <img src="images/matematika.jpg" alt="Matematika Dasar">
+                    <h3>Matematika Dasar</h3>
+                    <p>Belajar konsep dasar matematika dengan cara yang menyenangkan.</p>
+                    <p><strong>Durasi:</strong> 3 Bulan</p>
+                    <p><strong>Harga:</strong> Rp500.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+                <!-- Additional course cards go here -->
+            </div>
+        </main>
+        
+
+        <!-- Program List -->
+        <div class="programs" id="program-list">
+            <div class="program" data-subject="matematika" data-level="sma">
+                <h3>Program Matematika SMA</h3>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> (4/5)
+                </div>
+                <p>Deskripsi program Matematika untuk SMA. Mengajarkan konsep dasar hingga lanjutan.</p>
+            </div>
+            <div class="program" data-subject="fisika" data-level="sma">
+                <h3>Program Fisika SMA</h3>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> (5/5)
+                </div>
+                <p>Program Fisika SMA dengan fokus pada eksperimen dan teori dasar fisika.</p>
+            </div>
+            <div class="program" data-subject="bahasa" data-level="sd">
+                <h3>Program Bahasa Inggris SD</h3>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> (4/5)
+                </div>
+                <p>Program Bahasa Inggris untuk SD dengan pendekatan bermain sambil belajar.</p>
+            </div>
+        </div>
+
+        <main>
+            <div class="courses-container">
+                <!-- Matematika Dasar -->
+                <div class="course-card">
+                    <img src="images/matematika.jpg" alt="Matematika Dasar">
+                    <h3>Matematika Dasar</h3>
+                    <p>Belajar konsep dasar matematika dengan cara yang menyenangkan.</p>
+                    <p><strong>Durasi:</strong> 3 Bulan</p>
+                    <p><strong>Harga:</strong> Rp500.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Fisika -->
+                <div class="course-card">
+                    <img src="images/fisika.jpg" alt="Fisika">
+                    <h3>Fisika</h3>
+                    <p>Pahami konsep Fisika dengan eksperimen praktis.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp700.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Bahasa Inggris -->
+                <div class="course-card">
+                    <img src="images/inggris.jpg" alt="Bahasa Inggris">
+                    <h3>Bahasa Inggris</h3>
+                    <p>Tingkatkan kemampuan Bahasa Inggris Anda untuk komunikasi sehari-hari.</p>
+                    <p><strong>Durasi:</strong> 2 Bulan</p>
+                    <p><strong>Harga:</strong> Rp600.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Ilmu Pengetahuan Alam -->
+                <div class="course-card">
+                    <img src="images/fisika.2.png" alt="Ilmu Pengetahuan Alam">
+                    <h3>Ilmu Pengetahuan Alam</h3>
+                    <p>Pelajari dasar-dasar sains dengan pendekatan eksperimen nyata.</p>
+                    <p><strong>Durasi:</strong> 5 Bulan</p>
+                    <p><strong>Harga:</strong> Rp800.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Dasar Komputer -->
+                <div class="course-card">
+                    <img src="images/IT.jpg" alt="Dasar Komputer">
+                    <h3>Dasar Komputer</h3>
+                    <p>Pahami dasar-dasar komputer dan teknologi digital.</p>
+                    <p><strong>Durasi:</strong> 3 Bulan</p>
+                    <p><strong>Harga:</strong> Rp750.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Pemrograman Dasar -->
+                <div class="course-card">
+                    <img src="images/online.jpg" alt="Pemrograman Dasar">
+                    <h3>Pemrograman Dasar</h3>
+                    <p>Mulai perjalanan Anda dalam dunia coding dan teknologi.</p>
+                    <p><strong>Durasi:</strong> 6 Bulan</p>
+                    <p><strong>Harga:</strong> Rp1.000.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Bahasa Arab -->
+                <div class="course-card">
+                    <img src="images/bahasa-arab.jpg" alt="Bahasa Arab">
+                    <h3>Bahasa Arab</h3>
+                    <p>Pelajari bahasa Arab dengan mudah dan cepat, mulai dari dasar.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp650.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Bahasa Indonesia -->
+                <div class="course-card">
+                    <img src="images/bahasa-indonesia.jpg" alt="Bahasa Indonesia">
+                    <h3>Bahasa Indonesia</h3>
+                    <p>Meningkatkan kemampuan berbahasa Indonesia dengan cara yang praktis.</p>
+                    <p><strong>Durasi:</strong> 3 Bulan</p>
+                    <p><strong>Harga:</strong> Rp550.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Tafsir -->
+                <div class="course-card">
+                    <img src="images/tafsir.jpg" alt="Tafsir">
+                    <h3>Tafsir</h3>
+                    <p>Pahami makna dan tafsir Al-Qur'an dengan mendalam.</p>
+                    <p><strong>Durasi:</strong> 6 Bulan</p>
+                    <p><strong>Harga:</strong> Rp800.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Al-Qur'an & Tajwid -->
+                <div class="course-card">
+                    <img src="images/quran-tajwid.jpg" alt="Al-Qur'an & Tajwid">
+                    <h3>Al-Qur'an & Tajwid</h3>
+                    <p>Belajar membaca Al-Qur'an dengan benar sesuai tajwid yang baik dan benar.</p>
+                    <p><strong>Durasi:</strong> 5 Bulan</p>
+                    <p><strong>Harga:</strong> Rp700.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Hadits -->
+                <div class="course-card">
+                    <img src="images/hadits.jpg" alt="Hadits">
+                    <h3>Hadits</h3>
+                    <p>Mempelajari hadits-hadits shahih dan aplikasinya dalam kehidupan sehari-hari.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp600.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Sirah Nabawiyah -->
+                <div class="course-card">
+                    <img src="images/sirah-nabawiyah.jpg" alt="Sirah Nabawiyah">
+                    <h3>Sirah Nabawiyah</h3>
+                    <p>Memahami perjalanan hidup Nabi Muhammad SAW sebagai teladan umat.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp650.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Kimia -->
+                <div class="course-card">
+                    <img src="images/kimia.jpg" alt="Kimia">
+                    <h3>Kimia</h3>
+                    <p>Pahami konsep-konsep dasar kimia dan aplikasinya dalam kehidupan sehari-hari.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp700.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Biologi -->
+                <div class="course-card">
+                    <img src="images/biologi.jpg" alt="Biologi">
+                    <h3>Biologi</h3>
+                    <p>Pelajari dunia makhluk hidup dan sistem kehidupan dengan cara yang interaktif.</p>
+                    <p><strong>Durasi:</strong> 4 Bulan</p>
+                    <p><strong>Harga:</strong> Rp750.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- IT -->
+                <div class="course-card">
+                    <img src="images/IT.jpg" alt="IT">
+                    <h3>IT Dasar</h3>
+                    <p>Belajar dasar-dasar teknologi informasi dan komputer untuk pemula.</p>
+                    <p><strong>Durasi:</strong> 3 Bulan</p>
+                    <p><strong>Harga:</strong> Rp700.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+        
+                <!-- Pemrograman -->
+                <div class="course-card">
+                    <img src="images/programming.jpg" alt="Pemrograman">
+                    <h3>Pemrograman</h3>
+                    <p>Belajar dasar-dasar pemrograman komputer dengan menggunakan bahasa yang populer.</p>
+                    <p><strong>Durasi:</strong> 6 Bulan</p>
+                    <p><strong>Harga:</strong> Rp1.200.000</p>
+                    <a href="#" class="btn">Detail</a>
+                </div>
+            </div>
+        </main>
+        
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h2>Tanya Jawab (FAQ)</h2>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <strong>Bagaimana cara mendaftar program?</strong>
+                <div class="faq-answer">
+                    Untuk mendaftar program, Anda dapat mengisi formulir pendaftaran yang tersedia di halaman pendaftaran.
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <strong>Apakah ada diskon untuk pendaftaran grup?</strong>
+                <div class="faq-answer">
+                    Ya, kami memberikan diskon untuk pendaftaran grup. Hubungi kami untuk informasi lebih lanjut.
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <strong>Apakah materi dapat diakses setelah program selesai?</strong>
+                <div class="faq-answer">
+                    Ya, materi program dapat diakses kembali melalui portal online kami setelah program selesai.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Zidnan Bimbel | All rights reserved.</p>
+        <p>
+            <a href="https://facebook.com/zidnanbimbel" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/zidnanbimbel" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/zidnanbimbel" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#kontak">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<?php
+$conn->close();
+?>

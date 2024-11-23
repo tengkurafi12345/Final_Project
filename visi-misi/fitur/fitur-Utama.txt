@@ -1,0 +1,54 @@
+
+1. Fitur Login dan Registrasi
+   Halaman Login & Register:
+Pastikan kamu membuat halaman login.php dan register.php yang menangani proses autentikasi pengguna. Halaman registrasi harus menerima data seperti nama pengguna, email, dan password, sedangkan halaman login hanya membutuhkan email dan password.
+Password Hashing:
+Gunakan password_hash() di PHP untuk mengenkripsi password pengguna sebelum disimpan di database, dan pastikan untuk memverifikasi password dengan password_verify() saat login.
+Peningkatan Keamanan Login:
+Pertimbangkan untuk menambahkan fitur seperti batasan percakapan login (misalnya, 5 percakapan gagal dalam waktu 15 menit) untuk menghindari serangan brute force.
+Gunakan CSRF token untuk mencegah serangan Cross-Site Request Forgery (CSRF) saat form login atau registrasi.
+Tambahan:
+
+Autentikasi Dua Faktor (2FA): Sebagai langkah keamanan tambahan, pertimbangkan untuk menambahkan autentikasi dua faktor (misalnya, melalui email atau aplikasi autentikator) untuk meningkatkan keamanan akun pengguna.
+
+2. Validasi Input
+Validasi pada Halaman Registrasi dan Login:
+Pastikan untuk memvalidasi semua input di sisi server (menggunakan PHP) dan juga sisi klien (menggunakan JavaScript) untuk memastikan data yang diterima valid dan tidak berbahaya.
+Misalnya, pastikan email memiliki format yang benar menggunakan regular expression, dan pastikan password cukup kuat (misalnya, minimal 8 karakter, dengan kombinasi huruf, angka, dan simbol).
+Cek panjang nama pengguna dan pastikan tidak ada karakter khusus yang tidak diinginkan.
+Tambahan:
+
+Validasi Email (untuk registrasi): Selain memvalidasi format email, pertimbangkan untuk menambahkan verifikasi email melalui link yang dikirimkan ke email pengguna. Hal ini dapat mengurangi kemungkinan pengguna mendaftar dengan email yang tidak valid.
+
+3. Keamanan
+Menggunakan Prepared Statements untuk SQL Injection:
+Pastikan Anda selalu menggunakan prepared statements di PHP (misalnya, menggunakan PDO atau MySQLi) untuk mencegah SQL injection saat berinteraksi dengan database.
+HTTPS:
+Pastikan website Anda menggunakan HTTPS untuk mengamankan komunikasi data antara server dan pengguna, terutama untuk data sensitif seperti password dan informasi pengguna.
+Tambahan:
+
+Keamanan Session: Pastikan untuk mengelola sesi pengguna dengan aman. Gunakan session_regenerate_id() setelah login untuk mencegah session fixation, dan pastikan cookie sesi hanya dapat diakses melalui HTTP (httponly).
+XSS Protection: Cegah serangan Cross-Site Scripting (XSS) dengan memvalidasi dan membersihkan input dari pengguna sebelum menampilkannya di halaman. Gunakan fungsi seperti htmlspecialchars() pada output yang berasal dari input pengguna.
+
+
+4. Desain Responsif
+Penggunaan Bootstrap:
+Pastikan seluruh halaman menggunakan kelas responsif dari Bootstrap agar tampilan di perangkat mobile tetap rapi dan mudah diakses. Gunakan grid system dari Bootstrap untuk menyesuaikan tampilan sesuai dengan ukuran layar.
+Elemen yang Dapat Diakses:
+Pastikan form login dan registrasi mudah diakses oleh semua pengguna, termasuk mereka yang menggunakan pembaca layar. Gunakan atribut ARIA dan pastikan elemen-elemen form seperti input, button, dan label memiliki hubungan yang jelas.
+Tambahan:
+
+Uji Responsivitas: Setelah desain selesai, lakukan uji responsivitas di berbagai perangkat dan ukuran layar untuk memastikan tampilan dan fungsionalitas yang optimal.
+
+5. Fitur Tambahan
+Pengingat Password:
+Tambahkan fitur pengingat password dengan mengirimkan email berisi tautan untuk mengatur ulang password jika pengguna lupa.
+Profil Pengguna:
+Pengguna bisa mengedit profil mereka, termasuk mengubah nama, email, dan kata sandi. Pastikan pengguna dapat mengakses dan mengubah informasi pribadi mereka setelah login.
+Forum Diskusi:
+Menambahkan forum atau fitur diskusi di website bisa meningkatkan interaksi antar pengguna. Gunakan sistem moderasi untuk menjaga kualitas diskusi dan menghindari penyalahgunaan.
+Tambahan:
+
+Fitur Notifikasi: Misalnya, memberikan notifikasi kepada pengguna mengenai pembaruan atau pengumuman penting melalui email atau notifikasi di dashboard mereka.
+Fitur Pencarian: Jika website memiliki banyak konten, tambahkan fitur pencarian untuk mempermudah pengguna dalam menemukan materi yang diinginkan.
+Dashboard Admin: Fitur untuk admin untuk mengelola data pengguna, materi kursus, dan memantau pendaftaran secara efisien.

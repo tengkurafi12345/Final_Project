@@ -1,0 +1,268 @@
+/* Reset Margin & Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0.2rem 0; /* Sesuaikan ini sesuai tinggi header */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 0.2rem 0; /* Coba kurangi padding untuk mengurangi tinggi header */
+    position: fixed; /* Membuat header tetap di atas saat menggulir */
+    top: 0; /* Menempatkan header di bagian atas */
+    left: 0; /* Menempatkan header di sisi kiri */
+    right: 0; /* Menempatkan header di sisi kanan */
+    z-index: 100; /* Menetapkan z-index agar header berada di atas elemen lain */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tambahkan media query untuk penyesuaian lebih lanjut jika diperlukan */
+@media (max-width: 768px) {
+    header {
+        padding: 0.2rem 0; /* Mengurangi padding pada layar kecil */
+    }
+
+    .container {
+        margin-top: 10px; /* Sesuaikan margin atas pada layar kecil */
+    }
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1500x700') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #f4a300; /* Orange to contrast better with purple */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.hero .btn:hover {
+    background-color: #e68a00;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #6200ff;
+}
+
+.feature-item {
+    flex: 1 1 30%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #6c4fdb;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #E9ECEF;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+}
+
+/* Registration Form */
+.registration-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Sembunyikan secara default */
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.3s ease; /* Menambahkan transisi untuk efek lebih halus */
+}
+
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        flex: 1 1 100%; /* Mengubah ukuran fitur menjadi 100% pada layar kecil */
+        margin: 10px 0; /* Mengatur margin untuk tampilan yang lebih baik */
+    }
+
+    .hero {
+        padding: 50px 20px; /* Mengurangi padding pada hero untuk tampilan kecil */
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Mengurangi ukuran font pada hero untuk tampilan kecil */
+    }
+
+    .hero p {
+        font-size: 16px; /* Mengurangi ukuran font pada hero untuk tampilan kecil */
+    }
+}
+
